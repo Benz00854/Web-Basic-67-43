@@ -1,0 +1,134 @@
+<style>
+    /* CSS Global  */
+    * { 
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #d3e8ff;
+      color: rgb(24, 24, 24);
+    }
+/* ============================================== */
+    .container {
+      max-width: 1200px;
+      background-color: pink;
+      margin: 250px auto 20px;
+      padding: 10px;
+    }
+    /* Card base */
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px 35px;
+      box-shadow: 0px 4px 12px #d1d1d1;
+      border-top: 4px solid #cf5454;
+      margin-bottom: 40px;
+    }
+    /* Different module colors */
+    .card.module-1  {
+      border-top-color: #ef3fff;
+    }
+    .card.module-2  {
+      border-top-color: #579dff;
+    }
+    .card.module-3  {
+      border-top-color: #23ff1b;
+    }
+    .card.module-4  {
+      border-top-color: #f4ff26;
+    }
+    .card.module-5  {
+      border-top-color: #ff9b0e;
+    }
+    pre {
+
+    }
+    .note {
+
+    }
+    .note::before {  
+
+    }
+    code {
+      background-color: #dadada;
+      border-radius: 6px;
+      padding: 2px 4px;
+    }   
+    .badge {
+
+    }
+    /* Images (global safe defaults) */
+    img {
+
+    }
+    /* CSS For Group 1: Header  */
+    header {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 5px 5px 5px #818181;
+      /* fixed header */
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    h1 {
+      color: #ff3a3a;
+    }
+    .list-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+      justify-content: center;
+    }
+    .list-menu :hover {
+      text-decoration: none;
+      background-color: #8a2e2e;
+    }
+    .list-menu li {
+      background-color: #ff7979;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .list-menu li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    /* CSS For Group 2: Card 1: Basics  */
+    .img_small{
+        display: block;
+        width: 10%;
+    }
+    .img_small.center{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .img_small.right{
+        margin-left: auto;
+    }
+    /* CSS For Group 3: Card 2: Resize & aspect  */
+    
+    /* CSS For Group 4: Card 3: Object fit  */
+
+    /* CSS For Group 5: Card 4: Image as Link  */
+
+    /* CSS For Group 6: Card 5: Gallery  */
+
+    /* CSS For Group 7: Card 6: Responsive  */
+
+    /* CSS For Group 8: Card 7: Figure & Caption + Task  */
+
+    /* CSS For Group 9: Card 8: Local file tips  */
+
+    /* CSS For Group 10: Back to Tutorial */
+
+  </style>
