@@ -44,7 +44,10 @@
       border-top-color: #ff9b0e;
     }
     pre {
-
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      border-left: 4px solid #cf5454;
+      padding: 12px;
     }
     .note {
 
