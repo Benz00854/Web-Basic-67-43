@@ -5,16 +5,25 @@
       margin: 0;
       padding: 0;
     }
+    html {
+      scroll-padding-top: 250px;
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #d3e8ff;
       color: rgb(24, 24, 24);
+      background-image: url("../img/sky.jpg");
+      /* ========== background ========== */
+      background-size: cover;
+      background-color: #483766;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
     }
 /* ============================================== */
     .container {
       max-width: 1200px;
-      background-color: pink;
       margin: 250px auto 20px;
       padding: 10px;
     }
@@ -23,7 +32,7 @@
       background-color: #ffffff;
       border-radius: 12px;
       padding: 20px 35px;
-      box-shadow: 0px 4px 12px #d1d1d1;
+      box-shadow: 0px 4px 12px #231242;
       border-top: 4px solid #cf5454;
       margin-bottom: 40px;
     }
@@ -50,10 +59,14 @@
       padding: 12px;
     }
     .note {
-
+      border-left: 4px solid #e6e6e6;
+      padding: 12px;
+      color: #666;
+      margin-top: 12px;
+      font-size: 14px;
     }
-    .note::before {  
-
+    .note:before {
+      content: 📌;
     }
     code {
       background-color: #dadada;
@@ -61,11 +74,25 @@
       padding: 2px 4px;
     }   
     .badge {
-
+      color: rgb(226, 216, 255);
+      background-color: rgb(117, 97, 190);
+      border-radius: 99px;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      vertical-align: middle;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #ecc0ff;
+      font-weight: bold;
+    }
+    .back-link:hover {
+      text-decoration: underline;
     }
     /* Images (global safe defaults) */
     img {
-
     }
     /* CSS For Group 1: Header  */
     header {
@@ -83,7 +110,7 @@
     h1 {
       color: #ff3a3a;
     }
-    .list-menu {
+    .list-menu ul{
       display: flex;
       list-style: none;
       margin: 0;
@@ -91,47 +118,111 @@
       gap: 20px;
       justify-content: center;
     }
-    .list-menu :hover {
+    .list-menu ul:hover {
       text-decoration: none;
-      background-color: #8a2e2e;
     }
     .list-menu li {
-      background-color: #ff7979;
-      padding: 10px 15px;
-      border-radius: 5px;
-      margin-top: 10px;
+      margin-top: 30px;
+      transition: ;
     }
-    .list-menu li a {
+    .list-menu li:hover{
+      transform: translateY(-5px);
+    }
+    .list-menu a {
       text-decoration: none;
       color: #ffffff;
       font-weight: bold;
+
+      /* background-color: #ff7979; */
+      background: linear-gradient(135deg, #233c8d,#d14141);
+      box-shadow: 0px 4px 15px #7e7e7e;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: transfrom(3);
+    }
+    .list-menu a:hover {
+      background: linear-gradient(135deg, #cc6ed4,#d14141);
+
     }
     /* CSS For Group 2: Card 1: Basics  */
+    .position{
+      display: flex;
+      align-items: center;
+      border: 2px dashed #bdbdbd;
+      margin-bottom: 15px;
+    }
+    .position.left{
+      justify-content: flex-start;
+    }
+    .position.center{
+      justify-content: center;
+    }
+    .position.right{
+      justify-content: flex-end;
+    }
     .img_small{
         display: block;
         width: 10%;
-    }
-    .img_small.center{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .img_small.right{
-        margin-left: auto;
+        height: auto;
     }
     /* CSS For Group 3: Card 2: Resize & aspect  */
-    
+    .img-fixed {
+      width: 560px;
+      height: 160px;
+      object-fit: cover;
+    }
     /* CSS For Group 4: Card 3: Object fit  */
-
+    .obj-fit-image{
+      width: 800px;
+      height: 200px;
+      border: 1px solid black;
+    }
+    .obj-fit-image.contain {
+      object-fit: contain;
+    }
+    .obj-fit-image.fill {
+      object-fit: fill;
+    }
+    .obj-fit-image.cover {
+      object-fit: cover;
+    }
     /* CSS For Group 5: Card 4: Image as Link  */
-
+    .image-link img {
+      width: 260px;
+      border-radius: 30px;
+      transition: 0.3;
+    }
+    .image-link:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px #383838;
+    }
     /* CSS For Group 6: Card 5: Gallery  */
-
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px; 
+    }
+    .gallery img {
+      height: 120px;
+      width: 100%;
+      object-fit: cover; 
+    }
     /* CSS For Group 7: Card 6: Responsive  */
-
+    img {
+      max-width: 100%;
+      height: auto;
+    }
     /* CSS For Group 8: Card 7: Figure & Caption + Task  */
+    figure {
+      margin: 20px 0;
+      text-align: center;
+    }
 
     /* CSS For Group 9: Card 8: Local file tips  */
-
+    .bg-img {
+      background-image: url("../img/beach.jpg");
+      object-fit: ;
+    }
     /* CSS For Group 10: Back to Tutorial */
 
   </style>
