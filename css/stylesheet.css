@@ -1,0 +1,144 @@
+/* ===== รีเซ็ตค่าพื้นฐานทั้งเว็บ ===== */
+* {
+    margin: 0;              /* ลบระยะห่างรอบนอก */
+    padding: 0;             /* ลบระยะห่างรอบใน */
+    box-sizing: border-box; /* คำนวณขนาดรวม padding + border */
+}
+
+html {
+    scroll-behavior: smooth; /* เลื่อนหน้าเว็บแบบนุ่มนวล */
+}
+
+/* ===== โครงสร้างหลักของหน้าเว็บ ===== */
+body {
+    font-family: 'Kanit', sans-serif; /* ฟอนต์หลัก */
+    line-height: 1.6;                  /* ระยะห่างบรรทัด */
+    min-height: 100vh;                 /* สูงอย่างน้อยเต็มหน้าจอ */
+    margin: 0;
+
+    color: #ececec; /* สีตัวอักษรหลัก */
+    background: linear-gradient(135deg, #081f44, #32435e); /* พื้นหลังไล่สี */
+
+    display: flex;          /* ใช้ flex */
+    flex-direction: column; /* เรียงบนลงล่าง */
+}
+
+/* ===== ส่วนหัวเว็บ ===== */
+header {
+    display: flex;
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center;     /* จัดกลางแนวตั้ง */
+
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.7); /* พื้นหลังดำโปร่งใส */
+    backdrop-filter: blur(10px);    /* เบลอพื้นหลังด้านหลัง */
+}
+
+/* ===== ส่วนเนื้อหา ===== */
+section {
+    max-width: 1100px;  /* กว้างสุดของคอนเทนต์ */
+    margin: auto;       /* จัดให้อยู่กึ่งกลาง */
+    padding-top: 40px;
+
+    display: grid;                      
+    grid-template-columns: repeat(2, 1fr); /* แบ่ง 2 คอลัมน์เท่ากัน */
+    gap: 28px;                            /* ระยะห่างระหว่างกล่อง */
+
+    flex: 1; /* ดัน footer ลงล่างเมื่อเนื้อหาน้อย */
+}
+
+/* ===== ส่วนท้ายเว็บ ===== */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+/* ===== กล่องข้อมูลหลัก ===== */
+.card {
+    margin-bottom: 5px;
+    padding: 5px 20px;
+
+    background: linear-gradient(#000000cc, rgba(0, 0, 0, 0.2)); /* ไล่ดำโปร่งใส */
+    backdrop-filter: blur(10px); /* เอฟเฟกต์กระจกฝ้า */
+    border-radius: 12px;         /* มุมโค้ง */
+}
+
+/* ===== แถวข้อมูลย่อย ===== */
+.card2 {
+    width: 100%;
+    margin-bottom: 2px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ffffff; /* เส้นคั่นล่าง */
+}
+
+/* ===== รูปโปรไฟล์ ===== */
+.img_pf {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px; /* ขนาดไม่เกิน 200px */
+    height: auto;     /* รักษาสัดส่วน */
+    border-radius: 12px;
+}
+
+/* ===== ตารางเกรด ===== */
+.grade-table {
+    width: 100%;
+    border-collapse: collapse; /* รวมเส้นขอบให้ชิดกัน */
+    background: transparent;
+}
+
+.grade-table th,
+.grade-table td {
+    padding: 5px 8px;
+    font-size: 14px;
+    background: transparent;
+}
+
+/* หัวตารางรอง */
+.grade-table .subhead th {
+    color: #7184dc;
+}
+
+/* เส้นคั่นแต่ละแถว */
+.grade-table tbody tr {
+    border-bottom: 1px solid #ffffff20;
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ชี้ */
+.grade-table tbody tr:hover {
+    background: #ffffff10;
+}
+
+/* จัดข้อความกึ่งกลาง */
+.center {
+    text-align: center;
+}
+
+/* ทำเกรดให้เด่น */
+.grade {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ===== ตารางสรุปผล ===== */
+.summary {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.summary th,
+.summary td {
+    padding: 5px 10px;
+    border: 1px solid #ccc; /* เส้นกรอบ */
+}
+
+/* แถวสถานะ เช่น “ผลการศึกษา: ปกติ” */
+.status {
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.2);
+}
