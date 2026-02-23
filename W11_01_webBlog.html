@@ -211,9 +211,77 @@
             </div>
             <!-- Card 03 -->
             <div class="card">
-              📞 ติดต่อเรา ชื่อ นามสกุล อีเมล เบอร์โทรศัพท์ บริษัท/องค์กร
-              หัวข้อที่สนใจ รายละเอียด ความสนใจเพิ่มเติม ต้องการรับข่าวสารทาง
-              email สนใจบริการปรึกษา สนใจความร่วมมือ
+              <div class="contact-form-main-card">
+                <h2 class="contact-title">📞 ติดต่อเรา</h2>
+                <form action="" method="">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="fname" class="form-label">ชื่อ</label>
+                      <input type="text" id="fname" name="fname" placeholder="กรุณากรอกชื่อ" class="form-input">
+                    </div>
+                    <div class="form-group">
+                      <label for="lname" class="form-label">นามสกุล</label>
+                      <input type="text" id="lname" name="lname" placeholder="กรุณากรอกนามสกุล" class="form-input">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="email" class="form-label">อีเมล</label>
+                      <input type="text" id="email" name="email" placeholder="กรุณากรอกอีเมล" class="form-input">
+                    </div>
+                    <div class="form-group">
+                      <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
+                      <input type="tel" id="phone" name="phone" placeholder="กรุณากรอกเบอร์โทรศัพท์" class="form-input">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="company" class="form-label">บริษัท/องค์กร</label>
+                    <input type="text" id="company" name="company" placeholder="กรุณากรอกขื่อบริษัท" class="form-input">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="subject" class="form-label">หัวข้อที่สนใจ</label>
+                    <select name="subject" id="subject" class="form-select">
+                      <option value="AI">AI</option>
+                      <option value="IOT">IOT</option>
+                      <option value="Machine Learning">Machine Learning</option>
+                      <option value="Blockchain">Blockchain</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message" class="form-label">รายละเอียด</label>
+                    <textarea name="message" id="message" placeholder="  กรุณากรอกข้อขวามลงที่นี้" class="form-textarea"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="interect" class="form-label">ความสนใจเพิ่มเติม</label>
+                    
+                    <div class="form-checkbox-group">
+                      <div class="checkbox-item">
+                        <input type="checkbox" id="interect" name="interect[]" value="newsletter">
+                        <span>ต้องการรับข่าวสารทาง email</span>
+                      </div>
+
+                      <div class="checkbox-item">
+                        <input type="checkbox" id="interect" name="interect[]" value="consult">
+                        <span>สนใจบริการปรึกษา</span>
+                      </div>
+
+                      <div class="checkbox-item">
+                        <input type="checkbox" id="interect" name="interect[]" value="partnership">
+                        <span>สนใจความร่วมมือ</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <button type="submit" class="form-button">ส่งข้อความ</button>
+                    <button type="reset" class="form-button">ล้างข้อมูล</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </main>
           <!-- Right Side -->
