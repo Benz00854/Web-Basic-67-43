@@ -570,10 +570,10 @@ a {
 /* ___________Table - Aside___________ */
 
 :root {
-  --line: #bb3a29;
-  --bg01: #ffa264;
-  --bg02: #ffc163;
-  --bg03: #fff56b;
+  --line: #8d4940;
+  --bg01: #ffbc8b;
+  --bg02: #ffd89e;
+  --bg03: #fff9a6;
 }
 
 .wrap-gold-table {
@@ -614,7 +614,23 @@ a {
   background-color: var(--bg03);
 }
 
+.gold-up {
+  color: #43bb53;
+}
 
+
+.gold-down {
+  color: #bb4343;
+}
+
+.gold-up::before {
+  content: "▲ ";
+  color: #43bb53;
+}
+
+.gold-down::before {
+  content: "▼ ";
+}
 /* ___________Footer - Aside___________ */
 
 .footer {
