@@ -101,7 +101,7 @@ a {
 
 .nav-menu li a:hover,
 .nav-menu li a.active {
-  background-color: #a966bd;
+  background-color: #a862bd;
 }
 
 /* ________________________________________________________ */
@@ -339,7 +339,7 @@ a {
   box-shadow: 1px;
 }
 
-.card+.card {
+.card + .card {
   margin-top: 10px;
 }
 
@@ -461,7 +461,7 @@ a {
   padding: 18px;
 }
 
-.widget+.widget {
+.widget + .widget {
   margin-top: 10px;
 }
 
@@ -581,13 +581,14 @@ a {
   margin: 0 auto;
   border-radius: 12px;
   border: 1.5px solid var(--line);
-  overflow: hidden;             /* ซ่อนส่วนที่เกินออกมาของกล่อง */
+  overflow: hidden; /* ซ่อนส่วนที่เกินออกมาของกล่อง */
 }
 
 .gold-table {
   border: 1px solid var(--line);
   border-collapse: collapse;
   width: 100%;
+  
 }
 
 .gold-table-green {
@@ -606,7 +607,6 @@ a {
 .gold-table td {
   border: 1px solid var(--line);
   padding: 5px;
-  text-align: right;
 }
 
 .gold-table .total th,
@@ -614,18 +614,26 @@ a {
   background-color: var(--bg03);
 }
 
-.gold-up {
-  color: #43bb53;
+.num-right {
+  text-align: right;
 }
 
+.num-center {
+  text-align: center;
+}
 
-.gold-down {
-  color: #bb4343;
+.gold-up {
+  color: #43bb53;
+  text-align: center;
 }
 
 .gold-up::before {
   content: "▲ ";
-  color: #43bb53;
+}
+
+.gold-down {
+  color: #bb4343;
+  text-align: center;
 }
 
 .gold-down::before {
@@ -639,4 +647,118 @@ a {
   background-color: #333;
   text-align: center;
   color: #ffffff;
+}
+
+/* ========================================================================= */
+/* RESPONSIVE--------------------------------------------------------------- */
+/* ========================================================================= */
+
+/*
+Breakpoint                        Dimensions
+X-Small                           <576px
+Small                          sm ≥576px 
+Megium                         md ≥768px
+Lathe                          lg ≥922px
+Extra large                    xl ≥1200px
+Etra extra large              xxl ≥1400px
+*/
+
+/* สำหรับหน้าจอ 922px */
+@media (max-width: 922px) {
+  .site-header { background-color: #ffec9a;}
+  .content-grid { grid-template-columns: 1fr;}
+}
+
+/* สำหรับหน้าจอ 768px */
+@media (max-width: 768px) {
+  html {font-size: 14px;}
+  .nav-main {flex-direction: column;}
+  .nav-menu {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .site-header { background-color: #ffa76d;}
+  .hero-grid { grid-template-columns: 1fr;}
+  .form-row {grid-template-columns: 1fr;}
+  .form-checkbox-group {flex-direction: column; align-items: flex-start;}
+  
+}
+
+/* สำหรับหน้าจอ 576px */
+@media (max-width: 576px) {
+
+  .site-header {
+    background-color: #ff6c6c;
+  }
+
+  /* hamburger */
+  #hamburger-menu {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor:pointer;
+  }
+
+  #hamburger-menu span,
+  #hamburger-menu span::before,
+  #hamburger-menu span::after {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:3px;
+    background:#fff;
+    transition: all 0.3s ease;
+  }
+
+  #hamburger-menu span {
+    top: 50%;
+  }
+
+  #hamburger-menu span::before { top: -8px; }
+  #hamburger-menu span::after { top: 8px; }
+
+  /* สร้าง X */
+  #hamburger-menu.close span {
+    background: transparent;
+  }
+  
+  #hamburger-menu.close span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  #hamburger-menu.close span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  /* ซ่อนเมนู */
+  #menu{
+    display:none;
+    width:100%;
+  }
+
+  /* แสดงเมนู */
+  #menu.overlay {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* สลับตำแหน่งของ  item */
+  .order-box-image  {order: 3;}
+  .order-box-table  {order: 2;}
+  .order-box-form   {order: 1;}
+  
+  .sidebar-widget {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .order-w-f-intro  {order: -5;}
+  .order-w-f-purple {order: -1;}
+  .order-w-f-green  {order: -2;}
+  .order-w-fb       {order: -4;}
+  .order-w-sponsor  {order: -3;}
 }
