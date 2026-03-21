@@ -317,6 +317,7 @@ section {
 .radio-group,
 .checkbox-group {
     display: flex;
+    flex-wrap: wrap;
     gap: 14px;
 }
 
@@ -387,7 +388,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex: 2;
-    gap: 10px;
+    gap: 20px;
 }
 
 .footer-item {
@@ -430,13 +431,19 @@ footer {
     .recomendation-form-row {
         grid-template-columns: 1fr;
     }
+
+    .footer-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
 }
 
 @media (max-width: 768px) {
     .header-button {
         display: none;
     }
-    
+
     #burger-menu {
         display: flex;
     }
@@ -453,7 +460,7 @@ footer {
     #menu.show-menu {
         max-height: 400px;
     }
-    
+
     .nav-menu {
         flex-direction: column;
         padding: 20px 0;
@@ -469,6 +476,46 @@ footer {
         background-color: #f0f0f0;
         padding: 10px 5px;
     }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .solution-content {
+    grid-template-columns: 1fr;
+    }
+
+    .discover-content {
+    grid-template-columns: 1fr;
+    }
+    
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-actions button {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .btn-primary {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
